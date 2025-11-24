@@ -5,15 +5,12 @@
     --text-secondary: #65676b;
     --accent-color: #4f46e5;
     --border-color: #e4e6eb;
-
+    
     /* Pill Colors */
-    --pill-morning: #ff99aa;
-    /* Pink */
-    --pill-afternoon: #9ca3af;
-    /* Gray */
-    --pill-evening: #4ade80;
-    /* Green */
-
+    --pill-morning: #ff99aa; /* Pink */
+    --pill-afternoon: #9ca3af; /* Gray */
+    --pill-evening: #4ade80; /* Green */
+    
     --pill-empty-border: #cbd5e1;
     --pill-empty-bg: #ffffff;
 }
@@ -40,7 +37,7 @@ body {
     width: 100%;
     max-width: 900px;
     border-radius: 24px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
     overflow: hidden;
     padding: 30px;
 }
@@ -106,7 +103,7 @@ h1 {
 
 .day-cell:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     border-color: var(--accent-color);
 }
 
@@ -171,8 +168,7 @@ h1 {
 .pill-afternoon {
     width: 32px;
     height: 16px;
-    border-radius: 16px 16px 0 0;
-    /* Top semi-circle */
+    border-radius: 16px 16px 0 0; /* Top semi-circle */
 }
 
 .pill-afternoon.active {
@@ -236,16 +232,16 @@ h1 {
     .app-container {
         padding: 15px;
     }
-
+    
     .day-cell {
         min-height: 90px;
         padding: 5px;
     }
-
+    
     .pill {
         transform: scale(0.8);
     }
-
+    
     .weekdays div {
         font-size: 0.8rem;
     }
