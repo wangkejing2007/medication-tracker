@@ -28,10 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Render the calendar
     function renderCalendar() {
         calendarGrid.innerHTML = '';
-
+        
         const year = currentDate.getFullYear();
         const month = currentDate.getMonth();
-
+        
         // Update header
         currentDateDisplay.textContent = `${year}年 ${month + 1}月`;
 
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const firstDay = new Date(year, month, 1);
         // Last day of the month
         const lastDay = new Date(year, month + 1, 0);
-
+        
         const daysInMonth = lastDay.getDate();
         const startDayOfWeek = firstDay.getDay(); // 0 = Sunday
 
@@ -54,10 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let day = 1; day <= daysInMonth; day++) {
             const dateKey = formatDateKey(year, month, day);
             const dayData = medicationData[dateKey] || { morning: false, afternoon: false, evening: false };
-
+            
             const cell = document.createElement('div');
             cell.classList.add('day-cell');
-
+            
             // Highlight today
             const today = new Date();
             if (day === today.getDate() && month === today.getMonth() && year === today.getFullYear()) {
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function createPill(type, isActive, dateKey) {
         const pill = document.createElement('div');
         pill.classList.add('pill', `pill-${type}`);
-
+        
         if (isActive) {
             pill.classList.add('active');
         } else {
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Toggle state
         medicationData[dateKey][type] = !medicationData[dateKey][type];
-
+        
         // Update UI
         if (medicationData[dateKey][type]) {
             pillElement.classList.remove('unselected');
